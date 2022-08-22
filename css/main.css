@@ -1,0 +1,146 @@
+:root {
+  --primary-color: hsl(30, 38%, 92%);
+  --secondary-color: hsl(158, 36%, 37%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Montserrat;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  width: 800px;
+  height: 550px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.product-image-container {
+  width: 60%;
+  background: url("../images/image-product-desktop.jpg");
+  background-size: cover;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+}
+
+.product-details-container {
+  width: 40%;
+  padding: 40px;
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+.product-main-title {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--dark-grayish-blue);
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.product-sub-title {
+  font-family: Fraunces;
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  width: 15rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.product-content {
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+  margin: 1.5rem 0;
+}
+
+.product-price-container {
+  display: flex;
+  align-items: center;
+}
+
+.product-price {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-family: Fraunces;
+  margin-right: 20px;
+}
+
+.product-btn {
+  width: 100%;
+  outline: none;
+  font-weight: bold;
+  border: none;
+  font-size: 1.2rem;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.product-btn:hover {
+  background-color: brown;
+}
+
+.product-btn--icon {
+  margin-right: 10px;
+  height: 18px;
+  width: 18px;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+  }
+
+  .product-image-container {
+    width: 100%;
+    height: 40%;
+    background-image: url("../images/image-product-mobile.jpg");
+  }
+
+  .product-details-container {
+    height: 60%;
+    width: auto;
+  }
+
+  .product-sub-title {
+    width: auto;
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .product-content {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .product-price-container {
+    margin: 15px 0;
+  }
+
+  .product-btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
